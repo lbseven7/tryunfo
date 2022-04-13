@@ -1,8 +1,62 @@
+/* stylelint-disable selector-max-specificity */
 body {
-  background-color: rgb(219, 236, 192);
+  background-color: black;
+  /* background-image: url('https://static.vecteezy.com/system/resources/previews/002/949/141/large_2x/programming-code-coding-or-hacker-background-vector.jpg'); */
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  background-color: rgba(5, 106, 189, 0.59);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 30px;
+  width: 350px;
 }
 
 .form {
-  background-color: aqua;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 800px;
+}
+
+input, select, textarea, image {
+  border-radius: 14px;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  width: 400px;
+}
+
+.labelCheck {
+  color: aqua;
+}
+
+button {
+  background-color: rgba(247, 98, 6, 0.764);
+  border-radius: 15px;
+  box-shadow: 10px 10px  20px rgb(243, 239, 163);
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
+  height: 40px;
+  width: 400px;
+}
+
+p {
+  background-color: rgba(255, 166, 0, 0.772);
+  border: 2px solid rgb(249, 246, 246);
+  color: black;
+  display: flex;
+  height: 50px;
+
 }
