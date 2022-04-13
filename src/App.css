@@ -1,6 +1,7 @@
 /* stylelint-disable selector-max-specificity */
 body {
   background-color: black;
+
   /* background-image: url('https://static.vecteezy.com/system/resources/previews/002/949/141/large_2x/programming-code-coding-or-hacker-background-vector.jpg'); */
   color: white;
   display: flex;
@@ -58,5 +59,4 @@ p {
   color: black;
   display: flex;
   height: 50px;
-
 }
