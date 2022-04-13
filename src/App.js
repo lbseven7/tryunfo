@@ -31,9 +31,6 @@ class App extends React.Component {
     });
   };
 
-  // onSaveButtonClick = () => {
-
-  // }
   render() {
     const {
       cardName,
