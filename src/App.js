@@ -6,6 +6,9 @@ import Card from './components/Card';
 class App extends React.Component {
   constructor() {
     super();
+    this.isSaveButtonDisabled = this.isSaveButtonDisabled.bind(this);
+    this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
+    this.onInputChange = this.onInputChange.bind(this);
     this.state = {
       cardName: '',
       cardDescription: '',
@@ -15,7 +18,7 @@ class App extends React.Component {
       cardImage: '',
       cardRare: '',
       cardTrunfo: false,
-      // saveCard: [],
+      cardGrounp: [],
     };
   }
 
@@ -23,16 +26,54 @@ class App extends React.Component {
   //   this.setState({ cardDescription: target.value })
   // }
 
+  // controle genérico dos inputs
   onInputChange = ({ target }) => {
-    // controle genérico dos inputs
     const { name, value } = target;
     this.setState({
       [name]: value,
     });
   };
 
+  onSaveButtonClick = (event) => {
+    event.preventDefault();
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo } = this.state;
+
+    // console.log('chamando onSaveButtonClick');
+    const card = {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+    };
+
+    this.setState((prevState) => ({
+      cardGrounp: [...prevState.cardGrounp, card] }));
+
+    this.setState({
+      cardName: '',
+      cardImage: '',
+      cardDescription: '',
+      cardAttr1: 0,
+      cardAttr2: 0,
+      cardAttr3: 0,
+      cardRare: 'normal',
+    });
+  }
+
   // Ajuda de Jean
-  isSaveButtonDisabled() {
+  isSaveButtonDisabled = () => {
     const sumValue = 210;
     const maxPoints = 90;
     let { cardAttr1, cardAttr2, cardAttr3 } = this.state;
@@ -67,8 +108,9 @@ class App extends React.Component {
       cardImage,
       cardRare,
       cardTrunfo,
+      cardGrounp,
     } = this.state;
-
+    console.log(cardGrounp);
     return (
       <div>
         <h1>Adicionar Nova Carta</h1>
@@ -83,6 +125,7 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           onInputChange={ this.onInputChange }
           isSaveButtonDisabled={ this.isSaveButtonDisabled() } // ajuda de Jean
+          onSaveButtonClick={ this.onSaveButtonClick } // ajuda de Diego
         />
 
         <Card
