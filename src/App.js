@@ -31,6 +31,7 @@ class App extends React.Component {
     });
   };
 
+  // Ajuda de Jean
   isSaveButtonDisabled() {
     const sumValue = 210;
     const maxPoints = 90;
@@ -81,7 +82,7 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
           onInputChange={ this.onInputChange }
-          isSaveButtonDisabled={ this.isSaveButtonDisabled() }
+          isSaveButtonDisabled={ this.isSaveButtonDisabled() } // ajuda de Jean
         />
 
         <Card
