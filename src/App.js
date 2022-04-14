@@ -31,6 +31,31 @@ class App extends React.Component {
     });
   };
 
+  isSaveButtonDisabled() {
+    const sumValue = 210;
+    const maxPoints = 90;
+    let { cardAttr1, cardAttr2, cardAttr3 } = this.state;
+    const { cardName, cardDescription, cardImage, cardRare } = this.state;
+
+    cardAttr1 = Number(cardAttr1);
+    cardAttr2 = Number(cardAttr2);
+    cardAttr3 = Number(cardAttr3);
+    if (cardName
+    && cardDescription
+    && cardImage
+    && cardRare
+    && (cardAttr1 + cardAttr2 + cardAttr3) <= sumValue
+    && cardAttr1 <= maxPoints
+    && cardAttr1 >= 0
+    && cardAttr2 <= maxPoints
+    && cardAttr2 >= 0
+    && cardAttr3 <= maxPoints
+    && cardAttr3 >= 0) {
+      return false;
+    }
+    return true;
+  }
+
   render() {
     const {
       cardName,
@@ -56,6 +81,7 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
           onInputChange={ this.onInputChange }
+          isSaveButtonDisabled={ this.isSaveButtonDisabled() }
         />
 
         <Card

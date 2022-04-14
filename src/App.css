@@ -1,15 +1,13 @@
 /* stylelint-disable selector-max-specificity */
 body {
   background-color: black;
-
-  /* background-image: url('https://static.vecteezy.com/system/resources/previews/002/949/141/large_2x/programming-code-coding-or-hacker-background-vector.jpg'); */
+  /* background-image: url('https://www.wallpapertip.com/wmimgs/82-822560_imagens-full-hd-tecnologia.jpg'); */
   color: white;
   display: flex;
   justify-content: center;
 }
 
 h1 {
-  background-color: rgba(5, 106, 189, 0.59);
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -19,6 +17,7 @@ h1 {
 }
 
 .form {
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,8 +28,9 @@ h1 {
 input, select, textarea, image {
   border-radius: 14px;
   display: flex;
-  height: 30px;
-  justify-content: center;
+  height: 50px;
+
+  /* justify-content: start; */
   margin-bottom: 20px;
   margin-right: 20px;
   text-decoration: none;
@@ -42,21 +42,23 @@ input, select, textarea, image {
 }
 
 button {
-  background-color: rgba(247, 98, 6, 0.764);
-  border-radius: 15px;
-  box-shadow: 10px 10px  20px rgb(243, 239, 163);
+  background-color: rgba(247, 98, 6, 0.886);
+  
+  /* box-shadow: 10px 10px  20px rgb(243, 239, 163); */
   color: white;
   cursor: pointer;
-  font-size: 20px;
-  font-weight: 300;
-  height: 40px;
+  font-size: 30px;
+  font-weight: 600;
+  height: 60px;
+  text-decoration: none;
   width: 400px;
 }
 
 p {
-  background-color: rgba(255, 166, 0, 0.772);
+  background-color: rgba(250, 246, 238, 0.772);
   border: 2px solid rgb(249, 246, 246);
   color: black;
   display: flex;
+  flex-wrap: inherit;
   height: 50px;
 }
