@@ -19,8 +19,18 @@ class App extends React.Component {
       cardRare: '',
       cardTrunfo: false,
       cardGrounp: [],
+      hasTrunfo: false,
     };
   }
+
+  // // REquisito 7
+  // modifyCard = () => {
+  //   const { cardGrounp } = this.state;
+  //   cardGrounp.filter((element) => element
+  //   && this.setState({ cardTrunfo:
+  // <p data-testid="trunfo-card">Você já tem um Super Trunfo em seu baralho</p> }));
+  //   console.log(cardTrunfo);
+  // }
 
   // onInputChange = ({ target }) => { // controla o input e seta no state
   //   this.setState({ cardDescription: target.value })
@@ -34,6 +44,7 @@ class App extends React.Component {
     });
   };
 
+  // ajuda do Ewerson
   onSaveButtonClick = (event) => {
     event.preventDefault();
     const {
@@ -44,6 +55,7 @@ class App extends React.Component {
       cardAttr3,
       cardImage,
       cardRare,
+      hasTrunfo,
       cardTrunfo } = this.state;
 
     // console.log('chamando onSaveButtonClick');
@@ -56,10 +68,15 @@ class App extends React.Component {
       cardImage,
       cardRare,
       cardTrunfo,
+      hasTrunfo,
     };
 
     this.setState((prevState) => ({
       cardGrounp: [...prevState.cardGrounp, card] }));
+
+    this.setState(({ cardGrounp }) => ({
+      hasTrunfo: cardGrounp.find((element) => element.cardTrunfo),
+    }));
 
     this.setState({
       cardName: '',
@@ -72,7 +89,7 @@ class App extends React.Component {
     });
   }
 
-  // Ajuda de Jean
+  // Ajuda de Jean questão 5
   isSaveButtonDisabled = () => {
     const sumValue = 210;
     const maxPoints = 90;
@@ -109,8 +126,9 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       cardGrounp,
+      hasTrunfo,
     } = this.state;
-    console.log(cardGrounp);
+
     return (
       <div>
         <h1>Adicionar Nova Carta</h1>
@@ -126,6 +144,8 @@ class App extends React.Component {
           onInputChange={ this.onInputChange }
           isSaveButtonDisabled={ this.isSaveButtonDisabled() } // ajuda de Jean
           onSaveButtonClick={ this.onSaveButtonClick } // ajuda de Diego
+          cardGrounp={ cardGrounp }
+          hasTrunfo={ hasTrunfo }
         />
 
         <Card
