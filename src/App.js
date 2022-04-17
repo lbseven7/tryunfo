@@ -2,6 +2,8 @@ import React from 'react';
 import Form from './components/Form';
 import './App.css';
 import Card from './components/Card';
+import ListCards from './components/ListCards';
+// import ListCards from './components/ListCards';
 
 class App extends React.Component {
   constructor() {
@@ -158,6 +160,12 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
         />
+
+        <ListCards
+          cardGrounp={ cardGrounp }
+        />
+
+        {/* <ListCards cards={ cardGrounp } /> */}
       </div>
     );
   }

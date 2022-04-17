@@ -1,10 +1,13 @@
 /* stylelint-disable selector-max-specificity */
 body {
   background-color: black;
-  background-image: url('https://www.wallpapertip.com/wmimgs/82-822560_imagens-full-hd-tecnologia.jpg');
+
+  /* background-image: url('../images/boat-5889919.png'); */
+  background-image: url('../images/mesh-1430107.png');
   color: white;
   display: flex;
-  justify-content: center;
+
+  /* justify-content: center; */
 }
 
 h1 {
@@ -17,10 +20,9 @@ h1 {
 }
 
 .form {
-  background-color: black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   margin: auto;
   max-width: 800px;
 }
