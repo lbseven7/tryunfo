@@ -2,15 +2,17 @@ import React from 'react';
 import Form from './components/Form';
 import './App.css';
 import Card from './components/Card';
-import ListCards from './components/ListCards';
+import ListCards from './components/ListCards'; // Requisito 8
 // import ListCards from './components/ListCards';
 
 class App extends React.Component {
   constructor() {
     super();
+
     this.isSaveButtonDisabled = this.isSaveButtonDisabled.bind(this);
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
     this.onInputChange = this.onInputChange.bind(this);
+
     this.state = {
       cardName: '',
       cardDescription: '',
