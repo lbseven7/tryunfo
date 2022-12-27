@@ -42,11 +42,12 @@ h1 {
 }
 
 .form input {
-  border: 1px solid rgb(7, 151, 203);
+  /* border: 1px solid rgb(7, 151, 203); */
   border-radius: 5px;
   height: 30px;
   margin-top: 10px;
   padding: 5px;
+  border-style: hidden;
 }
 
 .form textarea {
@@ -55,6 +56,8 @@ h1 {
   height: 100px;
   margin-top: 10px;
   padding: 5px;
+  border-style: hidden;
+  border-style: hidden;
 }
 
 .form button {
@@ -70,18 +73,42 @@ h1 {
   margin-top: 0.7em;
 }
 
-/* .div-containerP {
-  background-color: rgba(250, 246, 238, 0.772);
-  border: 2px solid rgb(249, 246, 246);
-  color: black;
-  display: flex;
-  flex-direction: row;
-  height: 50px;
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
   margin-left: 50px;
-} */
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: flex-start;
+  justify-content: center;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+.container p {
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
 
 h3 {
   margin-left: 50px;
   font-size: 1.5em;
   color: gray !important;;
+}
+
+
+.container-class-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-size: 1.5em;
+  border: 1px solid red;
 }

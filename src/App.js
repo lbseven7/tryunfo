@@ -134,41 +134,50 @@ class App extends React.Component {
     } = this.state;
 
     return (
-      <div>
+      <main>
         <h1>Adicionar Nova Carta</h1>
-        <Form
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-          onInputChange={ this.onInputChange }
-          isSaveButtonDisabled={ this.isSaveButtonDisabled() } // ajuda de Jean
-          onSaveButtonClick={ this.onSaveButtonClick } // ajuda de Diego
-          cardGrounp={ cardGrounp }
-          hasTrunfo={ hasTrunfo }
-        />
 
-        <Card
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-        />
+        <section className="container-cards-form">
+          <Form
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardImage={ cardImage }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+            onInputChange={ this.onInputChange }
+            isSaveButtonDisabled={ this.isSaveButtonDisabled() } // ajuda de Jean
+            onSaveButtonClick={ this.onSaveButtonClick } // ajuda de Diego
+            cardGrounp={ cardGrounp }
+            hasTrunfo={ hasTrunfo }
+          />
+          <p>opa</p>
+        </section>
 
-        <ListCards
-          cardGrounp={ cardGrounp }
-        />
+        <section className="container-card">
+          <p>opa</p>
+          <Card
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardImage={ cardImage }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+          />
+        </section>
+
+        <section className="container-list-cards">
+          <ListCards
+            cardGrounp={ cardGrounp }
+          />
+        </section>
 
         {/* <ListCards cards={ cardGrounp } /> */}
-      </div>
+      </main>
     );
   }
 }
