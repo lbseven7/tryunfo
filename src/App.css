@@ -1,15 +1,15 @@
 /* stylelint-disable selector-max-specificity */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: black;
-  color: rgb(205, 202, 202);
+  background-color: rgb(235, 239, 239);
+  color: rgb(7, 151, 203);
   display: flex;
-
-  /* justify-content: center; */
-
-  /* background-image: url('../images/boat-5889919.png'); */
-
-  /* background-image: url('../images/mesh-1430107.png'); */
-
+  justify-content: center;
 }
 
 h1 {
@@ -34,36 +34,43 @@ h1 {
   /* max-width: 800px; */
 }
 
-input, select, textarea, image {
-  border-radius: 14px;
+.form label {
   display: flex;
-  height: 50px;
-
-  /* justify-content: start; */
-  margin-bottom: 20px;
-  margin-right: 20px;
-  text-decoration: none;
-
-  /* width: 400px; */
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px;
 }
 
-/* .labelCheck {
-  color: aqua;
-} */
+.form input {
+  border: 1px solid rgb(7, 151, 203);
+  border-radius: 5px;
+  height: 30px;
+  margin-top: 10px;
+  padding: 5px;
+}
 
-button {
+.form textarea {
+  border: 1px solid rgb(7, 151, 203);
+  border-radius: 5px;
+  height: 100px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.form button {
   background-color: rgba(247, 98, 6, 0.886);
   color: white;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 1.5em;
   font-weight: 600;
   height: 60px;
   text-decoration: none;
-
-  /* width: 400px; */
+  border: none;
+  width: 400px;
+  margin-top: 0.7em;
 }
 
-.div-containerP {
+/* .div-containerP {
   background-color: rgba(250, 246, 238, 0.772);
   border: 2px solid rgb(249, 246, 246);
   color: black;
@@ -71,10 +78,10 @@ button {
   flex-direction: row;
   height: 50px;
   margin-left: 50px;
-
-  /* flex-wrap: inherit; */
-}
+} */
 
 h3 {
   margin-left: 50px;
+  font-size: 1.5em;
+  color: gray !important;;
 }
